@@ -2,8 +2,11 @@
 //import { getRandomItem } from './utils.js';
 
 /* State */
-let gameState = 'guess';
+let gameState = 'results';
+let guess = 'guess-2';
 
+let correctGusses = 0;
+let totalGuesses = 0;
 /* Actions */
 function loadPage() {
     displayShells();
@@ -32,7 +35,6 @@ const totalDisplay = document.getElementById('total-display');
 function displayShells() {
     if (gameState === 'guess') {
         shellOne.classList.remove('reveal');
-        pearlOne.classList.remove('hidden');
         shellTwo.classList.remove('reveal');
         shellThree.classList.remove('reveal');
         resultDiv.classList.add('hidden');
